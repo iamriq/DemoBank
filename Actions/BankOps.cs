@@ -42,13 +42,13 @@ namespace BankingApp.Actions
             try
             {
                 Console.Clear();
-                Console.WriteLine("Enter Sender's account number: ");
+                Console.Write("Enter Sender's account number: ");
                 var SourceAccount = Console.ReadLine();
 
-                Console.WriteLine("Enter Recipient's account number: ");
+                Console.Write("Enter Recipient's account number: ");
                 var DestinationAccount = Console.ReadLine();
 
-                Console.WriteLine("Enter Amount: ");
+                Console.Write("Enter Amount: ");
                 var Amount = Convert.ToDecimal(Console.ReadLine());
 
                 var sender = db.Customers.Where(u => u.AccountNumber == SourceAccount).FirstOrDefault();
